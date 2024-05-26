@@ -1,0 +1,8 @@
+<p>Gestor funcionando:</p>
+@if (gestores) {
+    <ul>
+    @for (gestor of gestores; track gestor.id) {
+        <li>{{gestor.nombre}}</li>
+    }
+    </ul>
+}
