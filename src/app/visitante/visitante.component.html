@@ -1,1 +1,8 @@
 <p>Visitante Funcionando!</p>
+@if (visitantes) {
+    <ul>
+    @for (visitante of visitantes; track visitante.id) {
+        <li>{{visitante.nombre}}</li>
+    }
+    </ul>
+}

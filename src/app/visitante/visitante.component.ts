@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VisitanteService } from '../services/visitante.service';
 
 @Component({
   selector: 'app-visitante',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class VisitanteComponent {
 
+  visitantes!: any[];
+  
+  constructor(private visitanteService: VisitanteService) { }
+
+  ngOnInit() {
+    this.visitantes = this.visitanteService.getVisitantes();
+  }
 }
