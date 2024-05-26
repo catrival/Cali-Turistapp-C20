@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProveedorService } from '../services/proveedor.service';
 
 @Component({
   selector: 'app-proveedor',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './proveedor.component.scss'
 })
 export class ProveedorComponent {
+  proveedores!: any[];
+  
+  constructor(private proveedorService: ProveedorService) { }
 
+  ngOnInit() {
+    this.proveedores = this.proveedorService.getProveedores();
+  }
 }

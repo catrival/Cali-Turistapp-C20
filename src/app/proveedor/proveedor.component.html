@@ -1,1 +1,8 @@
 <p>Proveedor funcionando!</p>
+@if (proveedores) {
+    <ul>
+    @for (proveedor of proveedores; track proveedor.id) {
+        <li>{{proveedor.nombre}}</li>
+    }
+    </ul>
+}
